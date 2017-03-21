@@ -1,0 +1,162 @@
+[ 2017-03-20T02:37:28+08:00 ] ::1 /.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000042s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000037s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000047s ]
+
+[ 2017-03-20T02:37:32+08:00 ] ::1 /.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000059s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000055s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `boxing_users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `boxing_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `boxing_role_user` [ RunTime:0.0007s ]
+SQL: SELECT `role_id` FROM boxing_role_user a INNER JOIN boxing_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0007s ]
+SQL: UPDATE `boxing_users` SET `user_login`='admin',`user_pass`='###81e0b871315adf27d866399d5c14cfbf',`user_nicename`='admin',`user_email`='cg-man@outlook.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='0.0.0.0',`last_login_time`='2017-03-20 02:37:32',`create_time`='2017-03-18 02:08:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0005s ]
+
+[ 2017-03-20T10:18:46+08:00 ] ::1 /.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000084s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000179s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000071s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000088s ]
+SQL: SHOW COLUMNS FROM `boxing_users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `boxing_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `boxing_role_user` [ RunTime:0.0006s ]
+SQL: SELECT `role_id` FROM boxing_role_user a INNER JOIN boxing_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0006s ]
+SQL: UPDATE `boxing_users` SET `user_login`='admin',`user_pass`='###81e0b871315adf27d866399d5c14cfbf',`user_nicename`='admin',`user_email`='cg-man@outlook.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='0.0.0.0',`last_login_time`='2017-03-20 10:18:46',`create_time`='2017-03-18 02:08:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0005s ]
+
+[ 2017-03-20T15:08:14+08:00 ] ::1 /.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000059s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000056s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000072s ]
+
+[ 2017-03-20T15:08:17+08:00 ] ::1 /.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000071s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000056s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `boxing_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `boxing_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `boxing_role_user` [ RunTime:0.0004s ]
+SQL: SELECT `role_id` FROM boxing_role_user a INNER JOIN boxing_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0003s ]
+SQL: UPDATE `boxing_users` SET `user_login`='admin',`user_pass`='###81e0b871315adf27d866399d5c14cfbf',`user_nicename`='admin',`user_email`='cg-man@outlook.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='0.0.0.0',`last_login_time`='2017-03-20 15:08:17',`create_time`='2017-03-18 02:08:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0002s ]
+
+[ 2017-03-20T15:16:03+08:00 ] ::1 /.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-03-20T15:16:06+08:00 ] ::1 /.php?g=Admin&m=menu&a=add
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-03-20T15:16:43+08:00 ] ::1 /.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000087s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000038s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000047s ]
+SQL: SHOW COLUMNS FROM `boxing_users` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `boxing_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `boxing_menu` [ RunTime:0.0005s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `boxing_auth_rule` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: validate /home/cg-man/project/php/boxing/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `boxing_menu` WHERE `app` = 'Admin' AND `model` = 'Live' AND `action` = 'admin' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `parentid` FROM `boxing_menu` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: auto /home/cg-man/project/php/boxing/simplewind/Core/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `boxing_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('0','比赛直播管理','Admin','Live','admin','','dribbble','','1','0') [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `boxing_auth_rule` WHERE `name` = 'admin/live/admin' LIMIT 1   [ RunTime:0.0036s ]
+SQL: INSERT INTO `boxing_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/live/admin','Admin','admin_url','比赛直播管理') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `boxing_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0008s ]
+NOTIC: [2] mkdir(): File exists /home/cg-man/project/php/boxing/application/Admin/Controller/MenuController.class.php 第 247 行.
+
+[ 2017-03-20T15:16:43+08:00 ] ::1 /.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-03-20T15:16:46+08:00 ] ::1 /.php?g=Admin&m=Menu&a=add&parentid=193&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-03-20T15:17:38+08:00 ] ::1 /.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000054s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000040s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000053s ]
+SQL: SHOW COLUMNS FROM `boxing_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `boxing_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `boxing_menu` [ RunTime:0.0004s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `boxing_auth_rule` [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: validate /home/cg-man/project/php/boxing/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `boxing_menu` WHERE `app` = 'Admin' AND `model` = 'Players' AND `action` = 'index' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-03-20T15:17:42+08:00 ] ::1 /.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000077s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000057s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000073s ]
+SQL: SHOW COLUMNS FROM `boxing_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `boxing_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `boxing_menu` [ RunTime:0.0004s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `boxing_auth_rule` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: validate /home/cg-man/project/php/boxing/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `boxing_menu` WHERE `app` = 'Admin' AND `model` = 'Players' AND `action` = 'index' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-03-20T15:17:50+08:00 ] ::1 /.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000050s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000037s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000046s ]
+SQL: SHOW COLUMNS FROM `boxing_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `boxing_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `boxing_menu` [ RunTime:0.0005s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `boxing_auth_rule` [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: validate /home/cg-man/project/php/boxing/simplewind/Core/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `boxing_menu` WHERE `app` = 'Admin' AND `model` = 'Live' AND `action` = 'index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `parentid` FROM `boxing_menu` WHERE `id` = 193 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: auto /home/cg-man/project/php/boxing/simplewind/Core/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `boxing_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('193','直播列表','Admin','Live','index','','dribbble','','1','1') [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `boxing_auth_rule` WHERE `name` = 'admin/live/index' LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `boxing_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/live/index','Admin','admin_url','直播列表') [ RunTime:0.0001s ]
+SQL: SELECT * FROM `boxing_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0005s ]
+NOTIC: [2] mkdir(): File exists /home/cg-man/project/php/boxing/application/Admin/Controller/MenuController.class.php 第 247 行.
+
+[ 2017-03-20T15:17:50+08:00 ] ::1 /.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+

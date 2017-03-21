@@ -1,0 +1,24 @@
+[ 2017-03-19T19:37:14+08:00 ] ::1 /.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000057s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8] Undefined index: url /home/cg-man/project/php/boxing/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2017-03-19T19:37:15+08:00 ] ::1 /.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000030s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined index: url /home/cg-man/project/php/boxing/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2017-03-19T19:37:27+08:00 ] ::1 /.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined index: url /home/cg-man/project/php/boxing/application/Common/Controller/AppframeController.class.php 第 22 行.
+
