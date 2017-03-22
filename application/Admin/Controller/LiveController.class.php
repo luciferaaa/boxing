@@ -31,7 +31,8 @@ class LiveController extends AdminbaseController {
 	}
 
 	public function edit() {
-		$id = 
+		$id = $_GET('id');
+		$data = 
 		$this->display();
 	}
 }
