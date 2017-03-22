@@ -8,7 +8,8 @@
 	</head>
 	<body class='live'>
 		<div class='live-video'>
-			<video src="" poster='__PUBLIC__//image/list@2x.png'></video>
+<!--			<video controls="controls" poster='__PUBLIC__//image/list@2x.png' src="http://cache.m.iqiyi.com/dc/amdt/14c08e40x30b68ee7/9d742daf9c29e06232a77792fc6bd66c/3758698609/de159a7ec8d0b175a8f28b04a7778454.m3u8?qd_asc=80276e1f512fa36655c57f2838be7e22&qd_asrc=02020031010000000000&qd_at=1490086291012&qd_auid=0&qypid=3758698609_31&u=MjAxNTA1MTQvZDMvNWUvMWUwMTJlMmRjODRjZTFkZDRmZDU0MTI3MTMyZjNhNWY&qd_k=d78a621735a0c50b15e0b949b229ee11&np_tag=nginx_part_tag" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" playsinline="" preload="auto""></video>-->
+			<video controls="controls" poster='__PUBLIC__//image/list@2x.png' src="http://api.bigme.cibn.cc/play/get_real_url?key=2SPxe18SLu3NiGlEZIUNfFuYL4VNXuMuWrc%2B7N9qqGXpMER0mj%2B9bJQozyTt3GbXxP6rgjCUtG9Kmh427Q8iNg%3D%3D" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" playsinline="" preload="auto"></video>
 			<div class='num'>
 				<i></i>
 				6582
@@ -25,7 +26,7 @@
 							<span class="right-num">4500胜券</span>
 						</p>
 						<div class="score">
-							<div class="red" style="width: 46vw"></div><!-- 我是连接线 
+							<div class="red" style="width: 46vw"></div><!-- 我是连接线
 							--><div class="blue" style="width: 46vw"></div>
 							<img src="__PUBLIC__/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
 						</div>
@@ -67,7 +68,7 @@
 							<span class="right-num">4500胜券</span>
 						</p>
 						<div class="score">
-							<div class="red" style="width: 46vw"></div><!-- 我是连接线 
+							<div class="red" style="width: 46vw"></div><!-- 我是连接线
 							--><div class="blue" style="width: 46vw"></div>
 							<img src="__PUBLIC__/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
 						</div>

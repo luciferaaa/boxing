@@ -218,7 +218,7 @@ class MobliebaseController extends AppframeController{
         if(!empty($data_array)){
             // if($data_array['subscribe'] == 1){
             if(true){
-                $count = M('weixin_user')->where(['openid'=>$data_array['openid']])->count();
+                $count = M('weixin_user')->where(array('openid'=>$data_array['openid']))->count();
                 if($count == 0){
                     $data_msg['openid'] =  $data_array['openid'];
                     $data_msg['msg'] = json_encode($data_array);
@@ -366,14 +366,14 @@ class MobliebaseController extends AppframeController{
         $weixin_user_model = M('weixin_user');
         if(!empty($_COOKIE['openid20'])){
             $user_msg['openid'] = $_COOKIE['openid20'];
-            $weixin_user_data = $weixin_user_model->where(['openid'=>$_COOKIE['openid20']])->find();
+            $weixin_user_data = $weixin_user_model->where(array('openid'=>$_COOKIE['openid20']))->find();
             $user_msg['headimgurl'] = !empty($weixin_user_data['user_img']) ? $weixin_user_data['user_img'] : $_COOKIE['headimgurl'];
             $user_msg['nickname'] = !empty($weixin_user_data['user_nick']) ? $weixin_user_data['user_nick'] : $_COOKIE['nickname'];
             $user_msg['sex'] = !empty($weixin_user_data['user_sex']) ? $weixin_user_data['user_sex'] : $_COOKIE['sex'];
         }else{
             $openid = $this->GetOpenid();
-            $data = M("weixin_token")->where(['id'=>'1'])->find();
-            $weixin_user_data = $weixin_user_model->where(['openid'=>$_COOKIE['openid20']])->find();
+            $data = M("weixin_token")->where(array('id'=>'1'))->find();
+            $weixin_user_data = $weixin_user_model->where(array('openid'=>$_COOKIE['openid20']))->find();
             $user_msg_r = $this->getWeiXinMsg($data['weixin_access_token'],$openid['openid']);
             $time = time() + 2592000;
             setcookie("openid20",$user_msg_r['openid'],$time);
@@ -410,7 +410,7 @@ class MobliebaseController extends AppframeController{
      **/
     public function getSignPackage() {
         $weixin_token_model = M('weixin_token');
-        $weixin_token_data = $weixin_token_model->where(['id'=>1])->find();
+        $weixin_token_data = $weixin_token_model->where(array('id'=>'1'))->find();
         $jsapiTicket = $weixin_token_data['js_api_ticket'];
 
         // 注意 URL 一定要动态获取，不能 hardcode.
