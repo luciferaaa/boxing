@@ -17,7 +17,7 @@
 		</div>
 		<div class="live-body">
 			<ul>
-				<li class="live-body">
+				<li class="">
 					<p class="title">第二场(50公斤/5公斤)<span>进行中</span></p>
 					<!-- 这里是灰色的框框 -->
 					<div class="body">
@@ -59,7 +59,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="live-body">
+				<li class="">
 					<p class="title">第二场(50公斤/5公斤)<span>进行中</span></p>
 					<!-- 这里是灰色的框框 -->
 					<div class="body">
