@@ -13,11 +13,11 @@ class MobliebaseController extends AppframeController{
     function _initialize(){
         parent::_initialize();
         //获取微信用户信息的方法
-        $this->user_msg = $this->_getWeiXinUser();
+        //$this->user_msg = $this->_getWeiXinUser();
         //将用户信息放到所有继承这个类的控制层里
-        $this->assign('user_msg',$this->user_msg);
+        //$this->assign('user_msg',$this->user_msg);
         //获取jsapi配置信息返还到页面中
-        $this->assign('getSignPackage',$this->_getSignPackage());
+        //$this->assign('getSignPackage',$this->_getSignPackage());
     }
     /**
      *
