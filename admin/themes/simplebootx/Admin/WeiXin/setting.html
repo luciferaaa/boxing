@@ -1,0 +1,43 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('WeiXin/setting')}">当前assce_token</a></li>
+        <li><a href="{:U('WeiXin/details')}">设置</a></li>
+    </ul>
+    <div class="table-actions">
+        <button class="btn btn-primary js-update-access" type="button">重新获取</button>
+    </div>
+    <form class="js-ajax-form" action="{:U('Menu/listorders')}" method="post">
+        <table class="table table-hover table-bordered table-list" id="menus-table">
+            <thead>
+            <tr>
+                <th>当前assce_token</th>
+                <th>当前js_api_ticket</th>
+                <th>上次更新时间</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><?php echo $data['weixin_access_token']?></td>
+                    <td><?php echo $data['js_api_ticket']?></td>
+                    <td><?php echo date("Y-m-d h:i:s",$data['update_time'])?></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+<script>
+    $('button.js-update-access').on('click',function(e){
+        e.preventDefault();
+        $.getJSON("{:U('WeiXin/weixin_setting_update')}",
+                function(data){
+                    msg_dialog(data,$(this));
+                }
+        );
+    });
+</script>
+</body>
+</html>

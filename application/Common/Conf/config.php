@@ -15,7 +15,12 @@ if (file_exists("data/conf/route.php")) {
 } else {
     $routes = array();
 }
-
+//微信配置文件
+if (file_exists("data/conf/config.ini.php")) {
+    $weixin = include 'data/conf/config.ini.php';
+} else {
+    $weixin = array();
+}
 $configs= array(
         "LOAD_EXT_FILE"=>"extend",
         'UPLOADPATH' => 'data/upload/',
@@ -97,4 +102,4 @@ $configs= array(
         )
 );
 
-return  array_merge($configs,$db,$runtime_config);
+return  array_merge($configs,$db,$runtime_config,$weixin);
