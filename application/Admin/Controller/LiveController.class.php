@@ -31,8 +31,9 @@ class LiveController extends AdminbaseController {
 	}
 
 	public function edit() {
-		$id = $_GET('id');
-		$data = 
+		$id = $_GET['id'];
+		$data = $this->live_model->where(['id'=>$id])->select()[0];
+		$this->assign('data', $data);
 		$this->display();
 	}
 }
