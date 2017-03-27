@@ -17,10 +17,11 @@ class LiveController extends AdminbaseController {
 
 	public function index() {
 		$live_list = $this->live_model->select();
-
 		foreach($live_list as $key => $value) {
-			$live_list[$key]['red_name'] = $this->player_model->where(['id'=>$value['player_red_id']])->select()[0]['name'];
-			$live_list[$key]['blue_name'] = $this->player_model->where(['id'=>$value['player_blue_id']])->select()[0]['name'];
+            $red_name_array = $this->player_model->where(array('id'=>$value['player_red_id']))->select();
+			$live_list[$key]['red_name'] = $red_name_array[0]['name'];
+            $blue_name_array = $this->player_model->where(array('id'=>$value['player_blue_id']))->select();
+			$live_list[$key]['blue_name'] = $blue_name_array[0]['name'];
 		}
 		$this->assign('liveList', $live_list);
 		$this->display();
@@ -32,7 +33,7 @@ class LiveController extends AdminbaseController {
 
 	public function addPort() {
 		if(IS_POST) {
-			$data = [
+			$data = array(
 				'name' => $_POST['name'],
 				'leaves' => $_POST['leaves'],
 				'rounds' => $_POST['rounds'],
@@ -46,8 +47,8 @@ class LiveController extends AdminbaseController {
 				'watcher_base_num' => $_POST['watcher_base_num'],
 				'place' => $_POST['place'],
 				'date' => $_POST['date']
-			];
-			$r = $this->live_model->where(['id'=>$data['id']])->add($data);
+            );
+			$r = $this->live_model->where(array('id'=>$data['id']))->add($data);
 			if($r !== false) {
 				$this->success('添加成功');
 			} else {
@@ -58,14 +59,14 @@ class LiveController extends AdminbaseController {
 
 	public function edit() {
 		$id = $_GET['id'];
-		$data = $this->live_model->where(['id'=>$id])->select()[0];
-		$this->assign('data', $data);
+		$data = $this->live_model->where(array('id'=>$id))->select();
+		$this->assign('data', $data[0]);
 		$this->display();
 	}
 
 	public function editPort() {
 		if(IS_POST) {
-			$data = [
+			$data = array(
 				'id' => $_POST['id'],
 				'name' => $_POST['name'],
 				'leaves' => $_POST['leaves'],
@@ -80,8 +81,8 @@ class LiveController extends AdminbaseController {
 				'watcher_base_num' => $_POST['watcher_base_num'],
 				'place' => $_POST['place'],
 				'date' => $_POST['date']
-			];
-			$r = $this->live_model->where(['id'=>$data['id']])->save($data);
+            );
+			$r = $this->live_model->where(array('id'=>$data['id']))->save($data);
 			if($r !== false) {
 				$this->success('修改成功');
 			}else{

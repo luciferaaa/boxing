@@ -10,7 +10,7 @@ class VideoController extends AdminbaseController{
 
 	public function _initialize() {
 		parent::_initialize();
-		$this->video_list = D('video_list');
+		$this->video_list = M('video_list');
 		$this->players = M('players');
 	}
 
@@ -18,8 +18,10 @@ class VideoController extends AdminbaseController{
 		$videoList = $this->video_list->select();
 		// 利用选手id获取选手姓名
 		foreach($videoList as $key => $value) {
-			$videoList[$key]['red_name'] = $this->players->where(['id'=>$value['player_red_id']])->select()[0]['name'];
-			$videoList[$key]['blue_name'] = $this->players->where(['id'=>$value['player_blue_id']])->select()[0]['name'];
+            $red_name_array = $this->players->where(array('id'=>$value['player_red_id']))->select();
+			$videoList[$key]['red_name'] = $red_name_array[0]['name'];
+            $blue_name_array = $this->players->where(array('id'=>$value['player_blue_id']))->select();
+			$videoList[$key]['blue_name'] = $blue_name_array[0]['name'];
 			$videoList[$key]['winner_name'] = $value['winner'] == '0' ? '平局' : $value['winner'] == '1' ? $videoList[$key]['red_name'] : $videoList[$key]['blue_name'];
 		}
 		$this->assign('videoList', $videoList);
@@ -35,7 +37,7 @@ class VideoController extends AdminbaseController{
 	public function edit() {
 		if(IS_GET) {
 			$id = $_GET['id'];
-			$data = M('video_list')->where(['id' => $id])->select();
+			$data = M('video_list')->where(array('id' => $id))->select();
 			$this->assign('data', $data[0]);
 		}
 		$players = $this->players->select();
@@ -45,7 +47,7 @@ class VideoController extends AdminbaseController{
 
 	public function addPort() {
 		if(IS_POST) {
-			$data = [
+			$data = array(
 				'name' => $_POST['name'],
 				'image' => $_POST['image'],
 				'leaves' => $_POST['leaves'],
@@ -54,7 +56,7 @@ class VideoController extends AdminbaseController{
 				'player_blue_id' => $_POST['player_blue_id'],
 				'winner' => $_POST['winner'],
 				'link' => $_POST['link']
-			];
+            );
 			$r = M('video_list')->add($data);
 			if($r !== false) {
 				$this->success('添加成功');
@@ -66,7 +68,7 @@ class VideoController extends AdminbaseController{
 
 	public function editPort() {
 		if(IS_POST) {
-			$data = [
+			$data = array(
 				'id' => $_POST['id'],
 				'name' => $_POST['name'],
 				'image' => $_POST['image'],
@@ -76,8 +78,8 @@ class VideoController extends AdminbaseController{
 				'player_blue_id' => $_POST['player_blue_id'],
 				'winner' => $_POST['winner'],
 				'link' => $_POST['link']
-			];
-			$r = M('video_list')->where(['id' => $data['id']])->save($data);
+            );
+			$r = M('video_list')->where(array('id' => $data['id']))->save($data);
 			if($r !== false) {
 				$this->success('修改成功');
 			}else{
