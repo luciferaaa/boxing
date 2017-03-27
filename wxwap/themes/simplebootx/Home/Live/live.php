@@ -4,11 +4,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
 		<title>勇敢的心直播</title>
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/master.min.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/master.min.css">
 	</head>
 	<body class='live'>
 		<div class='live-video' style="position: fixed; top: 0;opacity:0.75;z-index: 999">
-			<video controls="controls" poster='__PUBLIC__//image/list@2x.png' src="http://api.bigme.cibn.cc/play/get_real_url?key=2SPxe18SLu3NiGlEZIUNfFuYL4VNXuMuWrc%2B7N9qqGXpMER0mj%2B9bJQozyTt3GbXxP6rgjCUtG9Kmh427Q8iNg%3D%3D" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" playsinline="" preload="auto">
+			<video controls="controls" poster='__PUBLIC__/mobile//image/list@2x.png' src="http://api.bigme.cibn.cc/play/get_real_url?key=2SPxe18SLu3NiGlEZIUNfFuYL4VNXuMuWrc%2B7N9qqGXpMER0mj%2B9bJQozyTt3GbXxP6rgjCUtG9Kmh427Q8iNg%3D%3D" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" playsinline="" preload="auto">
 			</video>
 			<div class='num'>
 				<i></i>
@@ -28,31 +28,31 @@
 						<div class="score">
 							<div class="red" style="width: 46vw"></div><!-- 我是连接线
 							--><div class="blue" style="width: 46vw"></div>
-							<img src="__PUBLIC__/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
+							<img src="__PUBLIC__/mobile/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
 						</div>
 						<!-- 这里是赏金 -->
 						<div class="money">
 							<p>12700<br><span>赏金</span></p>
-							<img src="__PUBLIC__/image/vs@2x.png" alt="">
+							<img src="__PUBLIC__/mobile/image/vs@2x.png" alt="">
 						</div>
 						<div class="menu">
 							<div class="image">
 								<div class="red">
-									<img src="__PUBLIC__/image/red@2x.png" alt="">
+									<img src="__PUBLIC__/mobile/image/red@2x.png" alt="">
 									<p>孙想想</p>
 								</div>
 								<div class="blue">
-									<img src="__PUBLIC__/image/blue@2x.png" alt="">
+									<img src="__PUBLIC__/mobile/image/blue@2x.png" alt="">
 									<p>杨永强</p>
 								</div>
 							</div>
 							<div class="btn">
 								<div class="red">
-									<img src="__PUBLIC__/image/red-btn@2x.png" alt="">
+									<img src="__PUBLIC__/mobile/image/red-btn@2x.png" alt="">
 									<p>掷胜</p>
 								</div>
 								<div class="blue">
-									<img src="__PUBLIC__/image/blue-btn@2x.png" alt="">
+									<img src="__PUBLIC__/mobile/image/blue-btn@2x.png" alt="">
 									<p>掷胜</p>
 								</div>
 							</div>
@@ -70,31 +70,31 @@
 						<div class="score">
 							<div class="red" style="width: 46vw"></div><!-- 我是连接线
 							--><div class="blue" style="width: 46vw"></div>
-							<img src="__PUBLIC__/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
+							<img src="__PUBLIC__/mobile/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
 						</div>
 						<!-- 这里是赏金 -->
 						<div class="money">
 							<p>12700<br><span>赏金</span></p>
-							<img src="__PUBLIC__/image/vs@2x.png" alt="">
+							<img src="__PUBLIC__/mobile/image/vs@2x.png" alt="">
 						</div>
 						<div class="menu">
 							<div class="image">
 								<div class="red">
-									<img src="__PUBLIC__/image/red@2x.png" alt="">
+									<img src="__PUBLIC__/mobile/image/red@2x.png" alt="">
 									<p>孙想想</p>
 								</div>
 								<div class="blue">
-									<img src="__PUBLIC__/image/blue@2x.png" alt="">
+									<img src="__PUBLIC__/mobile/image/blue@2x.png" alt="">
 									<p>杨永强</p>
 								</div>
 							</div>
 							<div class="btn">
 								<div class="red">
-									<img src="__PUBLIC__/image/red-btn@2x.png" alt="">
+									<img src="__PUBLIC__/mobile/image/red-btn@2x.png" alt="">
 									<p>掷胜</p>
 								</div>
 								<div class="blue">
-									<img src="__PUBLIC__/image/blue-btn@2x.png" alt="">
+									<img src="__PUBLIC__/mobile/image/blue-btn@2x.png" alt="">
 									<p>掷胜</p>
 								</div>
 							</div>
@@ -124,7 +124,7 @@
 			<div class="footer">
 				<p>胜券余额:2200<span>充值</span></p>
 			</div>
-			<img style="display: none" class="give" src="__PUBLIC__/image/zengsong@2x.png" alt="">
+			<img style="display: none" class="give" src="__PUBLIC__/mobile/image/zengsong@2x.png" alt="">
 		</div>
 		<!-- 提示弹框 -->
 		<div class="prompt" style="display: none">
