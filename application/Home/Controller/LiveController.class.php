@@ -15,6 +15,10 @@ class LiveController extends MobliebaseController{
 	public function live() {
 		$id = $_GET['id'];
 		$data = $this->live_list->where(array('id'=>$id))->select()[0];
+		$red_player = $this->players->where(array('id'=>$data['player_red_id']))->select()[0];
+		$blue_player = $this->players->where(array('id'=>$data['player_blue_id']))->select()[0];
+		$data['player_red_name'] = $red_player['name'];
+		$data['player_blue_name'] = $blue_player['name'];
 		$this->assign('data', $data);
 		$this->display();
 	}
