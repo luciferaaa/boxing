@@ -104,30 +104,35 @@ class MobliebaseController extends AppframeController{
             setcookie("openid",$user_msg_r['openid'],$time);
             $user_msg['openid'] = $user_msg_r['openid'];
             if(!empty($weixin_user_data['user_img'])){
-                setcookie("headimgurl",$weixin_user_data['user_img'],$time);
                 $user_msg['headimgurl'] = $weixin_user_data['user_img'];
             }else{
-                setcookie("headimgurl",$user_msg_r['headimgurl'],$time);
                 $user_msg['headimgurl'] = $user_msg_r['headimgurl'];
             }
             if(!empty($weixin_user_data['user_img'])){
-                setcookie("nickname",$weixin_user_data['user_nick'],$time);
                 $user_msg['nickname'] = $weixin_user_data['user_nick'];
             }else{
-                setcookie("nickname",$user_msg_r['nickname'],$time);
                 $user_msg['nickname'] = $user_msg_r['nickname'];
             }
-
             if(!empty($weixin_user_data['user_img'])){
-                setcookie("sex",$weixin_user_data['user_sex'],$time);
                 $user_msg['sex'] = $weixin_user_data['user_sex'];
             }else{
-                setcookie("sex",$user_msg_r['sex'],$time);
                 $user_msg['sex'] = $user_msg_r['sex'];
             }
-
+            $this->_setCookie($user_msg);
         }
         return $user_msg;
+    }
+    /**
+     * 设置cookie
+     **/
+    protected function _setCookie($data){
+        //设置cookie过期时间
+        $time = time() + 2592000;
+        if(!empty($data)){
+            foreach ($data as $key => $val) {
+                setcookie($key,$val,$time);
+            }
+        }
     }
     /**
      * 获取jsapi配置信息
