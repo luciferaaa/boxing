@@ -29,7 +29,7 @@ class LiveController extends AdminbaseController {
 
 	public function add() {
 		$players = $this->player_model->select();
-		$this->assign('plaers', $players);
+		$this->assign('players', $players);
 		$this->display();
 	}
 
