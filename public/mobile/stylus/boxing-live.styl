@@ -1,0 +1,316 @@
+color1 = #000000
+color2 = #262626
+color3 = #fadd6a
+color4 = #0382ed
+color5 = #e6003e
+color6 = #dfdfdf
+color7 = #adadad
+color8 = #eeeeee
+color9 = #1c1c20
+color10 = #bcbcbc
+
+.live
+	background color1
+.live-video
+	width 100vw
+	height 100vw * ( 9 / 16 )
+	position fixed
+	z-index 10
+	top 0
+	video
+		width 100vw
+		height 100vw * ( 9 / 16 )
+	.num
+		position absolute
+		left 0
+		top 1.5rem
+		height 1.5rem
+		background rgba(255, 255, 255, 0.3)
+		color #fff
+		line-height 1.5rem
+		padding 0 .5rem 0 .3rem
+		border-top-right-radius 1rem
+		border-bottom-right-radius 1rem
+		i
+			background url('../image/zaixian@2x.png')
+			background-size 100% 100%
+			display inline-block
+			width 1rem
+			height .8rem
+
+.live-body
+	margin-top 100vw * ( 9 / 16 )
+	.title
+		background color1
+		color #fff
+		font-size 14px
+		line-height 40px
+		padding 0 4vw
+		span
+			color color3
+			font-size 12px
+			float right
+	.body
+		color #fff
+		background color2
+		padding 30px 4vw 20px
+		.num
+			font-size 11px
+			overflow hidden
+			.left-num
+				float left
+			.right-num
+				float right
+		.score
+			position relative
+			.red
+				background color5
+				height 5px
+				display inline-block
+				border-top-left-radius 3px
+				border-bottom-left-radius 3px
+			.blue
+				background color4
+				height 5px
+				display inline-block
+				border-top-right-radius 3px
+				border-bottom-right-radius 3px
+			img
+				width 50px
+				position absolute
+				top -33px
+		.money
+			text-align center
+			color color3
+			font-size 20px
+			font-weight bold
+			line-height 25px
+			padding-top 20px
+			height 10px
+			span
+				font-size 14px
+			img
+				width 30px
+				margin 40px auto 0
+		.menu
+			padding 0 10vw
+			font-size 14px
+			text-align center
+			img
+				width 50px
+			.image
+				overflow hidden
+				.red
+					float left
+				.blue
+					float right
+			.btn
+				overflow hidden
+				margin-top 15px
+				img
+					width 50px
+				.red
+					float left
+				.blue
+					float right
+
+.pay
+	background rgba(0,0,0,0.8)
+	position fixed
+	bottom 0
+	left 0
+	right 0
+	border-top-left-radius 5px
+	border-top-right-radius 5px
+	.give
+		position absolute
+		width 150px
+		top -190px
+		left calc(50vw - 100px)
+	.title
+		position relative
+		i
+			display block
+			position absolute
+			float left
+			width 20px
+			height 20px
+			margin 10px
+			background url('../image/cha@2x.png')
+			background-size 100% 100%
+		p
+			text-align center
+			color #fff
+			line-height 40px
+			font-size 17px
+			border-bottom 1px #484848 solid
+	.body
+		color color3
+		padding-bottom 10px
+		p
+			span
+				display inline-block
+				text-align center
+				line-height 50px
+				width calc(25vw - 1px)
+				margin 2vw 4vw
+				font-size 18px
+				font-weight bold
+				border color10 solid 1px
+				border-radius 5px
+	.footer
+		p
+			color #fff
+			line-height 40px
+			font-size 15px
+			padding 0 4vw
+			span
+				color color3
+				float right
+.prompt
+	background #000
+	color #fff
+	width 150px
+	height 65px
+	border-radius 5px
+	text-align center
+	margin 0 calc(50vw - 75px)
+	position fixed
+	bottom 120px
+	font-size 15px
+	line-height 25px
+	.name
+		margin-top 5px
+.rank
+	background #fff
+	border-top-left-radius 5px
+	border-top-right-radius 5px
+	position fixed
+	left 0
+	right 0
+	.title
+		text-align center
+		line-height 40px
+		position relative
+		border-bottom 1px #848484 solid
+		.close
+		.info
+			display block
+			width 20px
+			height 20px
+			position absolute
+			top 0
+			margin 10px
+		.close
+			background url("../image/cha@2x.png")
+			background-size 100% 100%
+			left 0
+		.info
+			background url("../image/xinxi@2x.png")
+			background-size 100% 100%
+			right 0
+	.body
+		height 4*36px
+		overflow-y scroll
+		.table-title
+			background color8
+		li
+			border-bottom 1px solid color10
+			span
+				display inline-block
+				width 32%
+				text-align center
+				line-height 35px
+				font-size 16px
+.info
+	background #fff
+	border-top-left-radius 5px
+	border-top-right-radius 5px
+	position fixed
+	bottom 0
+	left 0
+	right 0
+	.title
+		position relative
+		border-bottom 1px #848484 solid
+		p
+			text-align center
+			line-height 40px
+		.info-close
+		.info-rank
+			display block
+			position absolute
+			top 0
+			margin 10px
+			width 20px
+			height 20px
+		.info-close
+			background url('../image/cha@2x.png')
+			background-size 100% 100%
+			left 0
+		.info-rank
+			background url('../image/paihang@2x.png')
+			background-size 100% 100%
+			right 0
+	.body
+		height 4*36px
+		overflow-y scroll
+		li
+			border-bottom 1px color10 solid
+			padding-left 5vw
+			padding-bottom 10px
+		p
+			font-size 16px
+			color color2
+			display inline-block
+			line-height 25px
+		span
+			font-size 12px
+			color #8a8a8a
+			display block
+			line-height 25px
+		.info1
+			p
+				width 94vw
+		.info2
+			p
+				width 44vw
+		.info3
+			p
+				width 29vw
+
+.father
+	position fixed
+	z-index 100
+	top 50vh
+	left calc(50vw - 150px)
+	width 300px
+	height 180px
+	background #fff
+	border-radius 5px
+	.title
+		position relative
+		text-align center
+		line-height 44px
+		font-size 17px
+	.body
+		width 250px
+		margin-left 20px
+		border 1px solid color7
+		padding 4px 4px 6px
+		input 
+			width 175px
+			height 40px
+			border none
+			outline none
+			font-size 17px
+			display inline
+	.btn
+		width 260px
+		background color3
+		margin-left 20px
+		margin-top 15px
+		text-align center
+		line-height 45px
+		font-size 16px
+

@@ -14,9 +14,12 @@ class LiveController extends MobliebaseController{
 	// 直播详情页面
 	public function live() {
 		$id = $_GET['id'];
-		$data = $this->live_list->where(array('id'=>$id))->select()[0];
-		$red_player = $this->players->where(array('id'=>$data['player_red_id']))->select()[0];
-		$blue_player = $this->players->where(array('id'=>$data['player_blue_id']))->select()[0];
+		$data = $this->live_list->where(array('id'=>$id))->select();
+		$data = $data[0];
+		$red_player = $this->players->where(array('id'=>$data['player_red_id']))->select();
+		$red_player = $red_player[0];
+		$blue_player = $this->players->where(array('id'=>$data['player_blue_id']))->select();
+		$blue_player = $blue_player[0];
 		$data['player_red_name'] = $red_player['name'];
 		$data['player_blue_name'] = $blue_player['name'];
 		$this->assign('data', $data);
@@ -25,7 +28,7 @@ class LiveController extends MobliebaseController{
 
 	public function playersPort() {
 		$id = $_GET['id'];
-		$data = $this->players->where(array('id'=>$id))->select()[0];
-		$this->echo(json_encode($data));
+		$data = $this->players->where(array('id'=>$id))->select();
+		echo(json_encode($data));
 	}
 }
