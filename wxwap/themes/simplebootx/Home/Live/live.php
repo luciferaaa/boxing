@@ -208,5 +208,7 @@
 			</div>
 		</div>
 	</body>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="__PUBLIC__/mobile/js/live.js"></script>
 </html>
 

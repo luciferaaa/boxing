@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
 	<title>勇敢的心回顾</title>
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/master.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/master.min.css">
 </head>
 <body class='boxing-list'>
 	<ul>
 		<foreach name="video_list" item="vo">
 			<li class='boxing-ele'>
-				<video poster="__PUBLIC__/image/list@2x.png">
+				<video poster="__PUBLIC__/mobile/image/list@2x.png">
 					<source src="{$vo.link}" type="video/mp4"></source>
 				</video>
 				<p>{$vo.leaves}/{$vo.rounds}回合</p>

@@ -85,7 +85,7 @@ class LiveController extends AdminbaseController {
 				'watcher_base_num' => $_POST['watcher_base_num'],
 				'place' => $_POST['place'],
 				'date' => $_POST['date']
-            );
+      );
 			$r = $this->live_model->where(array('id'=>$data['id']))->save($data);
 			if($r !== false) {
 				$this->success('修改成功');
@@ -94,6 +94,4 @@ class LiveController extends AdminbaseController {
 			}
 		}
 	}
-
-
 }
