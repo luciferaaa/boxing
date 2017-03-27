@@ -28,6 +28,8 @@ class LiveController extends AdminbaseController {
 	}
 
 	public function add() {
+		$players = $this->player_model->select();
+		$this->assign('plaers', $players);
 		$this->display();
 	}
 
@@ -60,7 +62,9 @@ class LiveController extends AdminbaseController {
 	public function edit() {
 		$id = $_GET['id'];
 		$data = $this->live_model->where(array('id'=>$id))->select();
+		$players = $this->player_model->select();
 		$this->assign('data', $data[0]);
+		$this->assign('players', $players);
 		$this->display();
 	}
 
