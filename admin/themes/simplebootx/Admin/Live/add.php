@@ -54,7 +54,7 @@
 					<tr>
 						<th>蓝方选手</th>
 						<td>
-							<select name="players_blue_id">
+							<select name="player_blue_id">
 								<option value="">==请选择==</option>
 								<foreach name='players' item='vo'>
 									<option value="{$vo.id}">{$vo.name}</option>
