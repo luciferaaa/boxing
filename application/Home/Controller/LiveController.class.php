@@ -26,6 +26,10 @@ class LiveController extends MobliebaseController{
 		$this->display();
 	}
 
+	public function rank() {
+		$this->display();
+	}
+
 	public function playersPort() {
 		$id = $_GET['id'];
 		$data = $this->players->where(array('id'=>$id))->select();

@@ -39,7 +39,7 @@
 			$('.pay img').hide();
 		}
 	});
-	$('.pay span').click(function () {
+	$('.pay .body span').click(function () {
 		var num = void 0;
 		if ($(this).color == 'red') {
 			num = parseInt($('.left-num')[0].innerHTML) + parseInt($(this)[0].innerHTML);
@@ -78,5 +78,11 @@
 		console.log(str);
 		$('.score img').css('left', str);
 	};
-	$('.footer span').click(function () {});
+	$('.footer span').click(function () {
+		$('.father').show();
+		$('.pay .title i').click();
+	});
+	$('.father .title i').click(function () {
+		$('.father').hide();
+	});
 })();

@@ -167,7 +167,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="father">
+		<div class="father" style="display: none;">
 			<div class="title">
 				<i></i>
 				充值金额

@@ -106,7 +106,7 @@
 			$('.pay img').hide();
 		}
 	});
-	$('.pay span').click(function() {
+	$('.pay .body span').click(function() {
 		let num;
 		if($(this).color == 'red'){
 			num = parseInt($('.left-num')[0].innerHTML) + parseInt($(this)[0].innerHTML);
@@ -144,6 +144,10 @@
 		$('.score img').css('left', str);
 	}
 	$('.footer span').click(()=>{
-
+		$('.father').show();
+		$('.pay .title i').click();
+	});
+	$('.father .title i').click(() => {
+		$('.father').hide();
 	});
 })();
