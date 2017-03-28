@@ -12,6 +12,9 @@
 	$.get('index.php?g=Home&m=Live&a=playersPort&id=' + blue_id, function (data) {
 		blue = JSON.parse(data)[0];
 	});
+	var red_num = parseInt($('.left-num').html());
+	var blue_num = parseInt($('.right-num').html());
+	$('.money p').html(red_num + blue_num + '<br><span>\u8D4F\u91D1</span>');
 	$('.image .red').click(function () {
 		$('.info .body').html('<ul>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<div class="info1">\n\t\t\t\t\t\t\t\t\t\t<p><span>\u59D3\u540D</span>' + red.name + '</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<div class="info1">\n\t\t\t\t\t\t\t\t\t\t<p><span>\u7EF0\u53F7/\u62F3\u8FF7\u8BE8\u79F0</span>' + red.nick_name + '</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<div class="info2">\n\t\t\t\t\t\t\t\t\t\t<p><span>\u5E74\u9F84</span>' + (new Date().getFullYear() - +red.birth) + '\u5C81</p>\n\t\t\t\t\t\t\t\t\t\t<p><span>\u7C4D\u8D2F</span>' + red.place + '</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<div class="info2">\n\t\t\t\t\t\t\t\t\t\t<p><span>\u8EAB\u9AD8</span>' + red.height + 'cm</p>\n\t\t\t\t\t\t\t\t\t\t<p><span>\u4F53\u91CD</span>' + red.weight + 'kg</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<div class="info3">\n\t\t\t\t\t\t\t\t\t\t<p><span>\u80DC</span>4</p>\n\t\t\t\t\t\t\t\t\t\t<p><span>\u8D1F</span>5</p>\n\t\t\t\t\t\t\t\t\t\t<p><span>\u5E73</span>0</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<div class="info1">\n\t\t\t\t\t\t\t\t\t\t<p><span>\u603B\u79EF\u5206</span>12450</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>');
 		$('.info').animate({ bottom: '0' });
@@ -41,18 +44,22 @@
 	});
 	$('.pay .body span').click(function () {
 		var num = void 0;
+		var prompt = $('.prompt p');
 		if ($(this).color == 'red') {
-			num = parseInt($('.left-num')[0].innerHTML) + parseInt($(this)[0].innerHTML);
+			var pay = parseInt($(this)[0].innerHTML);
+			num = pay + parseInt($('.left-num')[0].innerHTML);
 			$('.left-num')[0].innerHTML = num + '胜券';
+			prompt.eq(1).html('\u63B7\u7EA2\u65B9' + pay + '\u80DC\u5238');
 		} else {
-			num = parseInt($('.right-num')[0].innerHTML) + parseInt($(this)[0].innerHTML);
+			var _pay = parseInt($(this)[0].innerHTML);
+			num = _pay + parseInt($('.right-num')[0].innerHTML);
 			$('.right-num')[0].innerHTML = num + '胜券';
+			prompt.eq(1).html('\u63B7\u84DD\u65B9' + _pay + '\u80DC\u5238');
 		}
 		$('.prompt').show();
 		setTimeout(function () {
 			$('.prompt').hide();
 		}, 2000);
-
 		updateScore();
 	});
 	$('.info-close').click(function () {
@@ -75,7 +82,7 @@
 		$('.score .red').css('width', red_num / (red_num + blue_num) * 92 + 'vw');
 		$('.score .blue').css('width', blue_num / (red_num + blue_num) * 92 + 'vw');
 		var str = 'calc(' + red_num / (red_num + blue_num) * 92 + 'vw - 25px)';
-		console.log(str);
+		$('.money p').html(red_num + blue_num + '<br><span>\u8D4F\u91D1</span>');
 		$('.score img').css('left', str);
 	};
 	$('.footer span').click(function () {
