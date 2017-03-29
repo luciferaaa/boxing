@@ -30,37 +30,37 @@
 			<li>
 				<div class="num">2</div>
 				<div class="name">杨永弱</div>
-				<div class="score">12450</div>
+				<div class="score">9734</div>
 			</li>
 			<li>
 				<div class="num">3</div>
 				<div class="name">张飞</div>
-				<div class="score">12450</div>
+				<div class="score">6321</div>
 			</li>
 			<li>
 				<div class="num">4</div>
 				<div class="name">关羽</div>
-				<div class="score">12450</div>
+				<div class="score">3184</div>
 			</li>
 			<li>
 				<div class="num">5</div>
 				<div class="name">杨永强</div>
-				<div class="score">12450</div>
+				<div class="score">2123</div>
 			</li>
 			<li>
 				<div class="num">6</div>
 				<div class="name">杨永弱</div>
-				<div class="score">12450</div>
+				<div class="score">1232</div>
 			</li>
 			<li>
 				<div class="num">7</div>
 				<div class="name">张飞</div>
-				<div class="score">12450</div>
+				<div class="score">723</div>
 			</li>
 			<li>
 				<div class="num">8</div>
 				<div class="name">关羽</div>
-				<div class="score">12450</div>
+				<div class="score">450</div>
 			</li>
 
 		</ul>
