@@ -9,6 +9,9 @@
 	$.get(`index.php?g=Home&m=Live&a=playersPort&id=${blue_id}`, (data) => {
 		blue = JSON.parse(data)[0];
 	});
+	const red_num = parseInt($('.left-num').html());
+	const blue_num = parseInt($('.right-num').html());
+	$('.money p').html(`${red_num+blue_num}<br><span>赏金</span>`)
 	$('.image .red').click(() => {
 		$('.info .body').html(`<ul>
 								<li>
@@ -108,16 +111,20 @@
 	});
 	$('.pay .body span').click(function() {
 		let num;
+		const prompt = $('.prompt p');
 		if($(this).color == 'red'){
-			num = parseInt($('.left-num')[0].innerHTML) + parseInt($(this)[0].innerHTML);
+			const pay = parseInt($(this)[0].innerHTML);
+			num = pay + parseInt($('.left-num')[0].innerHTML);
 			$('.left-num')[0].innerHTML = num + '胜券';
+			prompt.eq(1).html(`掷红方${pay}胜券`);
 		}else{
-			num = parseInt($('.right-num')[0].innerHTML) + parseInt($(this)[0].innerHTML);
+			const pay = parseInt($(this)[0].innerHTML);
+			num = pay + parseInt($('.right-num')[0].innerHTML);
 			$('.right-num')[0].innerHTML = num + '胜券';
+			prompt.eq(1).html(`掷蓝方${pay}胜券`);
 		}
 		$('.prompt').show();
 		setTimeout(()=>{$('.prompt').hide();}, 2000);
-
 		updateScore();
 	});
 	$('.info-close').click(() => {
@@ -140,7 +147,7 @@
 		$('.score .red').css('width', red_num/(red_num+blue_num)*92 + 'vw');
 		$('.score .blue').css('width', blue_num/(red_num+blue_num)*92 + 'vw');
 		const str = 'calc(' + red_num/(red_num+blue_num)*92+'vw - 25px)';
-		console.log(str);
+		$('.money p').html(`${red_num+blue_num}<br><span>赏金</span>`)
 		$('.score img').css('left', str);
 	}
 	$('.footer span').click(()=>{
