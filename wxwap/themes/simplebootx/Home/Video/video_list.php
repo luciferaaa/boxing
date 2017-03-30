@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
-	<title>勇敢的心回顾</title>
+	<title>勇敢的心回顾1</title>
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/mobile/css/master.min.css">
 </head>
 <body class='boxing-list'>
