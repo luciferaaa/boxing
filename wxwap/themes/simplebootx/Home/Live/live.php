@@ -8,7 +8,7 @@
 	</head>
 	<body class='live'>
 		<div class='live-video' style="position: fixed; top: 0;z-index: 999">
-			<video controls="controls" poster='__PUBLIC__/mobile//image/list@2x.png' src="http://api.bigme.cibn.cc/play/get_real_url?key=2SPxe18SLu3NiGlEZIUNfFuYL4VNXuMuWrc%2B7N9qqGXpMER0mj%2B9bJQozyTt3GbXxP6rgjCUtG9Kmh427Q8iNg%3D%3D" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" playsinline="" preload="auto">
+			<video controls="controls" poster='__PUBLIC__/mobile//image/list@2x.png' src="http://hls1.qietv.douyucdn.cn/live/10000023rsUngVQ0/playlist.m3u8?wsSecret=1a90c5924ec0e7912196065ec79ac36e&wsTime=1490751497" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" playsinline="" preload="auto">
 			</video>
 			<div class='num'>
 				<i></i>
@@ -17,7 +17,7 @@
 		</div>
 		<div class="live-body">
 			<ul>
-				<li class="">
+				<li id="1">
 					<p class="title">第二场({$data.leaves}/{$data.rounds}回合)<span>进行中</span></p>
 					<!-- 这里是灰色的框框 -->
 					<div class="body">
@@ -61,7 +61,184 @@
 						</div>
 					</div>
 				</li>
-		</ul>
+				<li id="2">
+					<p class="title">第三场({$data.leaves}/{$data.rounds}回合)<span>未开始</span></p>
+					<!-- 这里是灰色的框框 -->
+					<div class="body">
+						<p class="num">
+							<span class="left-num">{$data.player_red_base_num}胜券</span>
+							<span class="right-num">{$data.player_blue_base_num}胜券</span>
+						</p>
+						<div class="score">
+							<div class="red" style="width: 46vw"></div><!-- 我是连接线
+							--><div class="blue" style="width: 46vw"></div>
+							<img src="__PUBLIC__/mobile/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
+						</div>
+						<!-- 这里是赏金 -->
+						<div class="money">
+							<p>{$data.money}<br><span>赏金</span></p>
+							<img src="__PUBLIC__/mobile/image/vs@2x.png" alt="">
+						</div>
+						<div class="menu">
+							<div class="image">
+								<div class="red">
+									<img src="__PUBLIC__/mobile/image/red@2x.png" alt="">
+									<p>{$data.player_red_name}</p>
+									<input type="hidden" value="{$data.player_red_id}">
+								</div>
+								<div class="blue">
+									<img src="__PUBLIC__/mobile/image/blue@2x.png" alt="">
+									<p>{$data.player_blue_name}</p>
+									<input type="hidden" value="{$data.player_blue_id}">
+								</div>
+							</div>
+							<div class="btn">
+								<div class="red">
+									<img src="__PUBLIC__/mobile/image/red-btn@2x.png" alt="">
+									<p>掷胜</p>
+								</div>
+								<div class="blue">
+									<img src="__PUBLIC__/mobile/image/blue-btn@2x.png" alt="">
+									<p>掷胜</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="3">
+					<p class="title">第四场({$data.leaves}/{$data.rounds}回合)<span>未开始</span></p>
+					<!-- 这里是灰色的框框 -->
+					<div class="body">
+						<p class="num">
+							<span class="left-num">{$data.player_red_base_num}胜券</span>
+							<span class="right-num">{$data.player_blue_base_num}胜券</span>
+						</p>
+						<div class="score">
+							<div class="red" style="width: 46vw"></div><!-- 我是连接线
+							--><div class="blue" style="width: 46vw"></div>
+							<img src="__PUBLIC__/mobile/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
+						</div>
+						<!-- 这里是赏金 -->
+						<div class="money">
+							<p>{$data.money}<br><span>赏金</span></p>
+							<img src="__PUBLIC__/mobile/image/vs@2x.png" alt="">
+						</div>
+						<div class="menu">
+							<div class="image">
+								<div class="red">
+									<img src="__PUBLIC__/mobile/image/red@2x.png" alt="">
+									<p>{$data.player_red_name}</p>
+									<input type="hidden" value="{$data.player_red_id}">
+								</div>
+								<div class="blue">
+									<img src="__PUBLIC__/mobile/image/blue@2x.png" alt="">
+									<p>{$data.player_blue_name}</p>
+									<input type="hidden" value="{$data.player_blue_id}">
+								</div>
+							</div>
+							<div class="btn">
+								<div class="red">
+									<img src="__PUBLIC__/mobile/image/red-btn@2x.png" alt="">
+									<p>掷胜</p>
+								</div>
+								<div class="blue">
+									<img src="__PUBLIC__/mobile/image/blue-btn@2x.png" alt="">
+									<p>掷胜</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="4">
+					<p class="title">第五场({$data.leaves}/{$data.rounds}回合)<span>未开始</span></p>
+					<!-- 这里是灰色的框框 -->
+					<div class="body">
+						<p class="num">
+							<span class="left-num">{$data.player_red_base_num}胜券</span>
+							<span class="right-num">{$data.player_blue_base_num}胜券</span>
+						</p>
+						<div class="score">
+							<div class="red" style="width: 46vw"></div><!-- 我是连接线
+							--><div class="blue" style="width: 46vw"></div>
+							<img src="__PUBLIC__/mobile/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
+						</div>
+						<!-- 这里是赏金 -->
+						<div class="money">
+							<p>{$data.money}<br><span>赏金</span></p>
+							<img src="__PUBLIC__/mobile/image/vs@2x.png" alt="">
+						</div>
+						<div class="menu">
+							<div class="image">
+								<div class="red">
+									<img src="__PUBLIC__/mobile/image/red@2x.png" alt="">
+									<p>{$data.player_red_name}</p>
+									<input type="hidden" value="{$data.player_red_id}">
+								</div>
+								<div class="blue">
+									<img src="__PUBLIC__/mobile/image/blue@2x.png" alt="">
+									<p>{$data.player_blue_name}</p>
+									<input type="hidden" value="{$data.player_blue_id}">
+								</div>
+							</div>
+							<div class="btn">
+								<div class="red">
+									<img src="__PUBLIC__/mobile/image/red-btn@2x.png" alt="">
+									<p>掷胜</p>
+								</div>
+								<div class="blue">
+									<img src="__PUBLIC__/mobile/image/blue-btn@2x.png" alt="">
+									<p>掷胜</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="5">
+					<p class="title">第一场({$data.leaves}/{$data.rounds}回合)<span>已结束</span></p>
+					<!-- 这里是灰色的框框 -->
+					<div class="body">
+						<p class="num">
+							<span class="left-num">{$data.player_red_base_num}胜券</span>
+							<span class="right-num">{$data.player_blue_base_num}胜券</span>
+						</p>
+						<div class="score">
+							<div class="red" style="width: 46vw"></div><!-- 我是连接线
+							--><div class="blue" style="width: 46vw"></div>
+							<img src="__PUBLIC__/mobile/image/quantao@2x.png" style="left: calc(46vw - 25px)" alt="">
+						</div>
+						<!-- 这里是赏金 -->
+						<div class="money">
+							<p>{$data.money}<br><span>赏金</span></p>
+							<img src="__PUBLIC__/mobile/image/vs@2x.png" alt="">
+						</div>
+						<div class="menu">
+							<div class="image">
+								<div class="red">
+									<img src="__PUBLIC__/mobile/image/red@2x.png" alt="">
+									<p>{$data.player_red_name}</p>
+									<input type="hidden" value="{$data.player_red_id}">
+								</div>
+								<div class="blue">
+									<img src="__PUBLIC__/mobile/image/blue@2x.png" alt="">
+									<p>{$data.player_blue_name}</p>
+									<input type="hidden" value="{$data.player_blue_id}">
+								</div>
+							</div>
+							<div class="btn">
+								<div class="red-gary">
+									<img src="__PUBLIC__/mobile/image/hui@2x.png" alt="">
+									<p>掷胜</p>
+								</div>
+								<div class="blue-gary">
+									<img src="__PUBLIC__/mobile/image/hui@2x.png" alt="">
+									<p>掷胜</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
 		</div>
 		<!-- 投掷 -->
 		<div class="pay" style="bottom: -100%">
