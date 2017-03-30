@@ -91,8 +91,9 @@
 
 		$('.info').animate({bottom: '0'});
 	});
-	$('.btn .red').click(() => {
+	$('.btn .red').click(function() {
 		$('.pay').animate({bottom: '0'}).__proto__.color = 'red';
+		$('.pay').__proto__.num = $(this).parent().parent().parent().parent().attr('id');
 		if(window.first == true){
 			$('.pay img').show();
 			window.first = false;
@@ -100,8 +101,9 @@
 			$('.pay img').hide();
 		}
 	});
-	$('.btn .blue').click(() => {
+	$('.btn .blue').click(function() {
 		$('.pay').animate({bottom: '0'}).__proto__.color = 'blue';
+		$('.pay').__proto__.num = $(this).parent().parent().parent().parent().attr('id');
 		if(window.first == true){
 			$('.pay img').show();
 			window.first = false;
@@ -112,20 +114,21 @@
 	$('.pay .body span').click(function() {
 		let num;
 		const prompt = $('.prompt p');
+		const round = $(this).parent().parent().parent().num;
 		if($(this).color == 'red'){
 			const pay = parseInt($(this)[0].innerHTML);
 			num = pay + parseInt($('.left-num')[0].innerHTML);
-			$('.left-num')[0].innerHTML = num + '胜券';
+			$(`#${round}`).find('.left-num')[0].innerHTML = num + '胜券';
 			prompt.eq(1).html(`掷红方${pay}胜券`);
 		}else{
 			const pay = parseInt($(this)[0].innerHTML);
 			num = pay + parseInt($('.right-num')[0].innerHTML);
-			$('.right-num')[0].innerHTML = num + '胜券';
+			$(`#${round}`).find('.right-num')[0].innerHTML = num + '胜券';
 			prompt.eq(1).html(`掷蓝方${pay}胜券`);
 		}
 		$('.prompt').show();
 		setTimeout(()=>{$('.prompt').hide();}, 2000);
-		updateScore();
+		updateScore(round);
 	});
 	$('.info-close').click(() => {
 		$('.info').animate({bottom: '-100%'});
@@ -141,14 +144,14 @@
 		$('.rank').animate({bottom: '-100%'});
 		$('.info').animate({bottom: '0'});
 	});
-	const updateScore = () => {
-		const red_num = parseInt($('.left-num')[0].innerHTML);
-		const blue_num = parseInt($('.right-num')[0].innerHTML);
-		$('.score .red').css('width', red_num/(red_num+blue_num)*92 + 'vw');
-		$('.score .blue').css('width', blue_num/(red_num+blue_num)*92 + 'vw');
+	const updateScore = (round) => {
+		const red_num = parseInt($(`#${round}`).find('.left-num')[0].innerHTML);
+		const blue_num = parseInt($(`#${round}`).find('.right-num')[0].innerHTML);
+		$(`#${round}`).find('.score .red').css('width', red_num/(red_num+blue_num)*92 + 'vw');
+		$(`#${round}`).find('.score .blue').css('width', blue_num/(red_num+blue_num)*92 + 'vw');
 		const str = 'calc(' + red_num/(red_num+blue_num)*92+'vw - 25px)';
-		$('.money p').html(`${red_num+blue_num}<br><span>赏金</span>`)
-		$('.score img').css('left', str);
+		$(`#${round}`).find('.money p').html(`${red_num+blue_num}<br><span>赏金</span>`)
+		$(`#${round}`).find('.score img').css('left', str);
 	}
 	$('.footer span').click(()=>{
 		$('.father').show();

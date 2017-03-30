@@ -26,6 +26,7 @@
 	});
 	$('.btn .red').click(function () {
 		$('.pay').animate({ bottom: '0' }).__proto__.color = 'red';
+		$('.pay').__proto__.num = $(this).parent().parent().parent().parent().attr('id');
 		if (window.first == true) {
 			$('.pay img').show();
 			window.first = false;
@@ -35,6 +36,7 @@
 	});
 	$('.btn .blue').click(function () {
 		$('.pay').animate({ bottom: '0' }).__proto__.color = 'blue';
+		$('.pay').__proto__.num = $(this).parent().parent().parent().parent().attr('id');
 		if (window.first == true) {
 			$('.pay img').show();
 			window.first = false;
@@ -45,22 +47,23 @@
 	$('.pay .body span').click(function () {
 		var num = void 0;
 		var prompt = $('.prompt p');
+		var round = $(this).parent().parent().parent().num;
 		if ($(this).color == 'red') {
 			var pay = parseInt($(this)[0].innerHTML);
 			num = pay + parseInt($('.left-num')[0].innerHTML);
-			$('.left-num')[0].innerHTML = num + '胜券';
+			$('#' + round).find('.left-num')[0].innerHTML = num + '胜券';
 			prompt.eq(1).html('\u63B7\u7EA2\u65B9' + pay + '\u80DC\u5238');
 		} else {
 			var _pay = parseInt($(this)[0].innerHTML);
 			num = _pay + parseInt($('.right-num')[0].innerHTML);
-			$('.right-num')[0].innerHTML = num + '胜券';
+			$('#' + round).find('.right-num')[0].innerHTML = num + '胜券';
 			prompt.eq(1).html('\u63B7\u84DD\u65B9' + _pay + '\u80DC\u5238');
 		}
 		$('.prompt').show();
 		setTimeout(function () {
 			$('.prompt').hide();
 		}, 2000);
-		updateScore();
+		updateScore(round);
 	});
 	$('.info-close').click(function () {
 		$('.info').animate({ bottom: '-100%' });
@@ -76,14 +79,14 @@
 		$('.rank').animate({ bottom: '-100%' });
 		$('.info').animate({ bottom: '0' });
 	});
-	var updateScore = function updateScore() {
-		var red_num = parseInt($('.left-num')[0].innerHTML);
-		var blue_num = parseInt($('.right-num')[0].innerHTML);
-		$('.score .red').css('width', red_num / (red_num + blue_num) * 92 + 'vw');
-		$('.score .blue').css('width', blue_num / (red_num + blue_num) * 92 + 'vw');
+	var updateScore = function updateScore(round) {
+		var red_num = parseInt($('#' + round).find('.left-num')[0].innerHTML);
+		var blue_num = parseInt($('#' + round).find('.right-num')[0].innerHTML);
+		$('#' + round).find('.score .red').css('width', red_num / (red_num + blue_num) * 92 + 'vw');
+		$('#' + round).find('.score .blue').css('width', blue_num / (red_num + blue_num) * 92 + 'vw');
 		var str = 'calc(' + red_num / (red_num + blue_num) * 92 + 'vw - 25px)';
-		$('.money p').html(red_num + blue_num + '<br><span>\u8D4F\u91D1</span>');
-		$('.score img').css('left', str);
+		$('#' + round).find('.money p').html(red_num + blue_num + '<br><span>\u8D4F\u91D1</span>');
+		$('#' + round).find('.score img').css('left', str);
 	};
 	$('.footer span').click(function () {
 		$('.father').show();
