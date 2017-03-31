@@ -8,12 +8,13 @@
 </head>
 <body class="rank-page">
 	<div class="opt">
-		<div>次重量级</div>
-		<div>超轻量级</div>
-		<div class="selectd">轻量级</div>
-		<div>超轻量级</div>
-		<div>次轻量级</div>
+		<div>次重量级</div><!--
+ --><div>超轻量级</div><!--
+ --><div class="selectd">轻量级</div><!--
+ --><div>超轻量级</div><!--
+ --><div>次轻量级</div>
 		<i></i>
+		<div class="layer"></div>
 	</div>
 	<div class="title">
 		<div>名次</div>
@@ -23,17 +24,17 @@
 	<div class="body">
 		<ul>
 			<li>
-				<div class="num">1</div>
+				<div class="num"><img src="__PUBLIC__/mobile/image/1@2x.png" alt=""></div>
 				<div class="name">杨永强</div>
 				<div class="score">12450</div>
 			</li>
 			<li>
-				<div class="num">2</div>
+				<div class="num"><img src="__PUBLIC__/mobile/image/2@2x.png" alt=""></div>
 				<div class="name">杨永弱</div>
 				<div class="score">9734</div>
 			</li>
 			<li>
-				<div class="num">3</div>
+				<div class="num"><img src="__PUBLIC__/mobile/image/3@2x.png" alt=""></div>
 				<div class="name">张飞</div>
 				<div class="score">6321</div>
 			</li>
@@ -62,7 +63,6 @@
 				<div class="name">关羽</div>
 				<div class="score">450</div>
 			</li>
-
 		</ul>
 	</div>
 </body>

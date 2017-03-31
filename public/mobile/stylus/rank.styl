@@ -13,8 +13,19 @@ color10 = #bcbcbc
 	.opt
 		background #1c1c20
 		position relative
+		.layer
+			width 100vw
+			height 44px
+			position absolute
+			top 0
+			left 0
+			bottom 0
+			right 0
+			background url('../image/mengban.png')
+			background-size 100% 100%
+			pointer-events none
 		div
-			width calc(20vw - 5px)
+			width 20vw
 			display inline-block
 			height 44px
 			text-align center
@@ -50,4 +61,12 @@ color10 = #bcbcbc
 				width calc(33vw - 5px)
 				text-align center
 				line-height 50px
-
+			.num
+				position relative
+				height 40px
+				img
+					height 40px
+					width auto
+					position absolute
+					top 0
+					left calc(16vw - 12px)
